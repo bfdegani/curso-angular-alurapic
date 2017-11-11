@@ -22,6 +22,10 @@ angular.module('alurapic').controller('FotosController', function($scope, $http)
 */
   //carga da lista de fotos a partir de um ajax
   $scope.fotos = [];
+
+  //implementando filtro
+  $scope.filtro = '';
+
   /*
   $http.get('v1/fotos') //$http usa padrao promise. necessário o uso do metodo then para saber que o processmento ocorreu
     .then(function(retorno){
