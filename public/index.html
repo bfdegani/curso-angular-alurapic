@@ -18,7 +18,9 @@
             </div>
             <!-- meu-painel refere-se a diretiva 'meuPainel' definida em 'minhasDiretivas' -->
             <!-- ng-repeat diretiva do angular para iterar na lista -->
-            <meu-painel ng-repeat="foto in fotos" titulo="{{foto.titulo}}" url="{{foto.url}}"></meu-painel>
+            <meu-painel ng-repeat="foto in fotos" titulo="{{foto.titulo}}" url="{{foto.url}}">
+              <img class="img-responsive center-block" src="{{foto.url}}" alt="{{foto.titulo}}"> <!-- esse elemento filho só é exibido pq a diretiva define transclude=true -->
+            </meu-painel>
         </div> <!-- fim container -->
     </body>
 </html>
