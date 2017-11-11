@@ -1,1 +1,1 @@
-angular.module('alurapic', []); // ao definir um novo module, o array [] armazena as dependencias do module
+angular.module('alurapic', ['minhasDiretivas']); // ao definir um novo module, o array [] armazena as dependencias do module

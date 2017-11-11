@@ -9,20 +9,16 @@
         <script src="js/lib/angular.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/controllers/fotos-controller.js"></script>
+        <script src="js/directives/minhas-diretivas.js"></script>
     </head>
     <body ng-controller="FotosController"><!-- diretiva do angular ng-controller associa um controller a um bloco do DOM -->
         <div class="container">
             <div class="jumbotron">
               <h1 class="text-center">Alurapic</h1>
             </div>
-            <div ng-repeat="foto in fotos" class="panel panel-default"> <!-- ng-repeat diretiva do angular para iterar na lista -->
-                <div class="panel-heading">
-                  <h3>{{foto.titulo}}</h3>
-                </div>
-                <div class="panel-body">
-                  <img class="img-responsive center-block" src="{{foto.url}}" alt="{{foto.titulo}}">
-                </div>
-            </div> <!-- fim panel -->
+            <!-- meu-painel refere-se a diretiva 'meuPainel' definida em 'minhasDiretivas' -->
+            <!-- ng-repeat diretiva do angular para iterar na lista -->
+            <meu-painel ng-repeat="foto in fotos" titulo="{{foto.titulo}}" url="{{foto.url}}"></meu-painel>
         </div> <!-- fim container -->
     </body>
 </html>
