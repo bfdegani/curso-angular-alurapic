@@ -10,6 +10,7 @@ angular.module('minhasDiretivas', [])
     }
 
     ddo.transclude = true; //preserva elementos filhos no DOM
+/*
     ddo.template =
       '<div class="panel panel-default"> <!-- inicio panel -->'
     + '    <div class="panel-heading">'
@@ -18,6 +19,9 @@ angular.module('minhasDiretivas', [])
     + '    <div class="panel-body" ng-transclude> <!-- ng-transclude indica onde os elementos filhos serão inseridos -->'
     + '    </div>'
     + '</div> <!-- fim panel -->';
-
+*/
+    // para não colocar código html dentro do javascript, em vez de usar ddo.template, pode-se usar ddo.templateUrl
+    ddo.templateUrl = 'js/directives/meu-painel.html';
+    
     return ddo; // ddo é direct definition object
   });
